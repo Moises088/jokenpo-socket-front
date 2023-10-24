@@ -6,18 +6,41 @@
     </div>
 
     <div class="room">
-      
+        <div class="your-select" *ngIf="hand">
+            <h2>Sua escolha</h2>
+            <div class="action" *ngIf="hand == 'paper'">
+                <img src="../../../assets/hand-paper.png" height="80px" alt="paper">
+            </div>
+            <div class="action" *ngIf="hand == 'rock'">
+                <img src="../../../assets/hand-rock.png" alt="rock">
+            </div>
+            <div class="action" *ngIf="hand == 'scissors'">
+                <img src="../../../assets/hand-scissors.png" height="85px" alt="scissors">
+            </div>
+        </div>
+
+        <div class="your-select" *ngIf="hand">
+            <h2>Esperando o oponente...</h2>
+            <div class="action" *ngIf="oppenent == 'paper'">
+                <img src="../../../assets/hand-paper.png" height="80px" alt="paper">
+            </div>
+            <div class="action" *ngIf="oppenent == 'rock'">
+                <img src="../../../assets/hand-rock.png" alt="rock">
+            </div>
+            <div class="action" *ngIf="oppenent == 'scissors'">
+                <img src="../../../assets/hand-scissors.png" height="85px" alt="scissors">
+            </div>
+        </div>
     </div>
 
     <div class="footer">
-        <div class="action">
+        <div class="action" (click)="selectHand('paper')">
             <img src="../../../assets/hand-paper.png" height="80px" alt="paper">
         </div>
-        <div class="action">
+        <div class="action" (click)="selectHand('rock')">
             <img src="../../../assets/hand-rock.png" alt="rock">
         </div>
-        <div class="action">
-            <div class="action">
+        <div class="action" (click)="selectHand('scissors')">
             <img src="../../../assets/hand-scissors.png" height="85px" alt="scissors">
         </div>
     </div>

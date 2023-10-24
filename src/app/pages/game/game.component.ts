@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class GameComponent {
 
+  public hand!: "paper" | "rock" | "scissors";
+  public oppenent!: "paper" | "rock" | "scissors";
+
+  selectHand(hand: "paper" | "rock" | "scissors") {
+    if (this.hand) return
+
+    this.hand = hand;
+  }
 }
