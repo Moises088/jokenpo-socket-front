@@ -1,0 +1,65 @@
+.container,
+.content {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 40px 20px;
+}
+
+.content {
+    max-width: 600px;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.title h1 {
+    font-size: 52px;
+    text-align: center;
+}
+
+.title small {
+    font-size: 32px;
+    text-align: center;
+}
+
+.room h4 {
+    text-align: center;
+    font-size: 30px;
+}
+
+.footer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer .action {
+    width: 120px;
+    height: 120px;
+    background-color: #FFF;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all ease 0.5s;
+}
+
+.footer .action:hover {
+    cursor: pointer;
+    transform: scale(0.97);
+}
+
+.footer .action img {
+    object-fit: contain;
+    max-height: 90px;
+}
