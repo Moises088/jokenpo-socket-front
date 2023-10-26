@@ -1,8 +1,10 @@
 <div class="container">
   <div class="content">
     <div class="title">
-      <h1>Sala 123</h1>
-      <span>Pedra, papel ou tesoura</span>
+      <h1>Sala {{roomCode}}</h1>
+      <span class="subtitle">Pedra, papel ou tesoura</span>
+      <h1 *ngIf="result">{{result}}</h1>
+      <span>Jogar novamente em:</span><countdown #cd [config]="config"></countdown>
     </div>
 
     <div class="room">
@@ -20,7 +22,8 @@
         </div>
 
         <div class="your-select" *ngIf="hand">
-            <h2>Esperando o oponente...</h2>
+            <h2 *ngIf="!oppenent">Esperando o oponente...</h2>
+            <h2 *ngIf="oppenent">Oponente</h2>
             <div class="action" *ngIf="oppenent == 'paper'">
                 <img src="../../../assets/hand-paper.png" height="80px" alt="paper">
             </div>

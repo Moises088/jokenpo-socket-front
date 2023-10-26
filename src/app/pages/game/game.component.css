@@ -6,7 +6,7 @@
     align-items: center;
     justify-content: space-between;
     flex-direction: column;
-    padding: 40px 20px;
+    padding: 20px;
 }
 
 .content {
@@ -21,13 +21,15 @@
 }
 
 .title h1 {
-    font-size: 52px;
+    font-size: 45px;
     text-align: center;
 }
 
-.title small {
-    font-size: 32px;
+.title .subtitle {
+    font-size: 20px;
     text-align: center;
+    display: block;
+    margin-bottom: 10px;
 }
 
 .room {
